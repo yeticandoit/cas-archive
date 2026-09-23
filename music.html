@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music — CAS Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html">CAS<span>ARCHIVE</span></a>
+    <button class="nav-toggle" aria-label="Open menu">☰</button>
+    <nav>
+      <a href="index.html">Home</a><a class="active" href="music.html">Music</a><a href="artist.html">Artist</a><a href="developer.html">Developer</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="page-hero">
+      <p class="eyebrow">02 / THE DISCOGRAPHY</p>
+      <h1>Every record.<br><em>Every room it opens.</em></h1>
+      <p>Browse the current catalog represented on the artist's official archive. Song titles are included; lyrics are intentionally not reproduced here.</p>
+    </section>
+
+    <section class="controls">
+      <label class="search">
+        <span>⌕</span><input id="searchInput" type="search" placeholder="Search songs, releases..." autocomplete="off">
+      </label>
+      <select id="filterSelect" aria-label="Filter releases">
+        <option value="all">All releases</option>
+        <option value="album">Albums</option>
+        <option value="ep">EPs</option>
+        <option value="single">Singles / releases</option>
+      </select>
+    </section>
+
+    <section id="releaseList" class="release-list"></section>
+
+    <section class="lyrics-note">
+      <div>
+        <p class="eyebrow">LYRICS</p>
+        <h2>Keep the words<br><em>where they belong.</em></h2>
+      </div>
+      <p>For copyright reasons, this fan site does not bundle or reproduce full song lyrics. Each track can instead open the official CAS lyrics page when one exists. You can also add your own licensed/local lyrics in a future data file.</p>
+    </section>
+  </main>
+
+  <div id="player" class="player hidden">
+    <div class="player-art" id="playerArt">CAS</div>
+    <div class="player-meta"><strong id="playerTitle">Nothing playing</strong><span id="playerRelease">CAS Archive</span></div>
+    <div class="player-controls">
+      <button id="prevBtn" title="Previous">◀</button><button id="playBtn" class="play-main" title="Play/Pause">▶</button><button id="nextBtn" title="Next">▶</button>
+    </div>
+    <div class="progress-wrap"><span id="currentTime">0:00</span><input id="progress" type="range" min="0" max="100" value="0"><span id="duration">0:00</span></div>
+    <label class="upload-audio" title="Use your own licensed/local audio files">＋ Audio</label>
+    <input id="audioInput" type="file" accept="audio/*" multiple hidden>
+    <audio id="audio"></audio>
+  </div>
+
+  <footer class="site-footer"><span>CAS ARCHIVE</span><span>FAN-MADE / NOT OFFICIAL</span><span>© 2026</span></footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script src="music.js"></script>
+</body>
+</html>

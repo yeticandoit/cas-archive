@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CAS Archive — a fan-made Cigarettes After Sex music archive and listening interface.">
+  <title>CAS Archive — Cigarettes After Sex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html">CAS<span>ARCHIVE</span></a>
+    <button class="nav-toggle" aria-label="Open menu">☰</button>
+    <nav>
+      <a class="active" href="index.html">Home</a>
+      <a href="music.html">Music</a>
+      <a href="artist.html">Artist</a>
+      <a href="developer.html">Developer</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">A FAN-MADE DIGITAL ARCHIVE</p>
+        <h1>Cigarettes<br><em>After Sex.</em></h1>
+        <p class="hero-text">A midnight archive for the records, songs, eras and atmosphere of Cigarettes After Sex.</p>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="music.html">ENTER THE ARCHIVE</a>
+          <button class="btn btn-ghost" id="randomBtn">RANDOM SONG</button>
+        </div>
+      </div>
+      <div class="hero-orbit">
+        <div class="orbit-ring"></div>
+        <div class="hero-disc"><span>CAS</span></div>
+      </div>
+    </section>
+
+    <section class="intro reveal">
+      <div>
+        <p class="eyebrow">THE COLLECTION</p>
+        <h2>Music for the<br><em>hours nobody sees.</em></h2>
+      </div>
+      <p class="intro-text">Explore studio albums, EPs, singles and selected releases in one quiet, cinematic interface. Use your own audio files for playback, or open an official listening source from each release.</p>
+    </section>
+
+    <section class="featured reveal">
+      <div class="section-heading">
+        <span>01 / FEATURED RELEASES</span>
+        <a href="music.html">VIEW ALL →</a>
+      </div>
+      <div id="featuredGrid" class="album-grid"></div>
+    </section>
+
+    <section class="quote-section reveal">
+      <div class="quote-mark">“</div>
+      <blockquote>There are songs you listen to.<br><em>And songs you return to.</em></blockquote>
+      <p>CAS ARCHIVE / 2026</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>CAS ARCHIVE</span>
+    <span>FAN-MADE / NOT OFFICIAL</span>
+    <span>© 2026</span>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
